@@ -22,8 +22,8 @@ const h3 = (title, style) => {
     return `<h3 class="${style}">${title}</h3>`;
 };
 
-const p = (ingredientsList, ethnicity, productDetails) => {
-    return `<p>${ingredientsList}, ${ethnicity}, ${productDetails}.</p>`;
+const p = (...items) => {
+    return items;
 }
 
 const div = (name, type, ethnicity, productDetails, style) => {
@@ -37,6 +37,7 @@ const div = (name, type, ethnicity, productDetails, style) => {
 
 let foodFactory = (name, type, ethnicity, productDetails) => {
     let factoryOutput = div(name, type, ethnicity, productDetails, "div-style");
+    console.log(factoryOutput)
     return `${factoryOutput}`;
 };
 
